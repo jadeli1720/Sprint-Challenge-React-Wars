@@ -1,6 +1,6 @@
 import React from "react";
 // import { Card, Icon } from 'semantic-ui-react'
-import { Cards } from './Styling'
+import { Cards, Header, SubHeader, Description, Left, Right } from './Styling'
 
 export default function CharacterCard(props) {
   console.log(props);
@@ -13,13 +13,33 @@ export default function CharacterCard(props) {
     //   </Card.Content>
     // </Card>
     <Cards>
+      <Header>
         {props.name}
-       {props.gender}
+      </Header>
+      <SubHeader>
         {props.birth}
-         {props.height}
-        {props.mass}
-         {props.hair}
-        {props.eyes}
+      </SubHeader>
+      <h3>Description</h3>
+      <Description>
+        <Left>
+          <p>Gender:</p>
+          <p>Hair Color:</p> 
+          <p>Eye Color:</p> 
+          <p>Height:</p> 
+          <p>Mass:</p>  
+        </Left>
+        <Right>
+          <p>{props.gender}</p>
+          <p>{props.hair}</p>
+          <p>{props.eyes}</p>
+          <p>{props.height}</p>
+          <p>{props.mass}</p>
+          
+        </Right>
+        
+      </Description>
+        
+       
 
     </Cards>
   );
