@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
 import CharacterCard from './Card';
-import { Table } from 'semantic-ui-react';
 
 
 
@@ -20,7 +19,7 @@ export default function Data() {
             .get(`https://swapi.co/api/people/`)
             .then(res => {
                 setData(res.data.results);
-                // console.log('Got Response', res);
+                console.log('Got Response', res);
             })
             .catch(error => {
                 console.log('Got an error', error);
@@ -30,20 +29,7 @@ export default function Data() {
 
     return (
         <div className="table">
-            <Table celled fixed singleLine>
-    <Table.Header>
-      <Table.Row>
-        <Table.HeaderCell>Name</Table.HeaderCell>
-        <Table.HeaderCell>Gender</Table.HeaderCell>
-        <Table.HeaderCell>Birthday</Table.HeaderCell>
-        <Table.HeaderCell>Height</Table.HeaderCell>
-        <Table.HeaderCell>Mass</Table.HeaderCell>
-        <Table.HeaderCell>Hair Color</Table.HeaderCell>
-        <Table.HeaderCell>Eye Color</Table.HeaderCell>
-      </Table.Row>
-    </Table.Header>
-    <Table.Body>
-    {data.map((data, index) => (
+            {data.map((data, index) => (
                 <CharacterCard name={data.name} key={index}
                                birth={data.birth_year}
                                height={data.height}
@@ -54,20 +40,6 @@ export default function Data() {
                                homeworld={data.homeworld}
                 />
             ))}
-    </Table.Body>
-
-  </Table>
-            {/* {data.map((data, index) => (
-                <CharacterCard name={data.name} key={index}
-                               birth={data.birth_year}
-                               height={data.height}
-                               mass={data.mass}
-                               hair={data.hair_color}
-                               eyes={data.eye_color}
-                               gender={data.gender}
-                               homeworld={data.homeworld}
-                />
-            ))} */}
         </div>
     )
 }
