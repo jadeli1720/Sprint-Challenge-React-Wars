@@ -36,6 +36,8 @@ export default function Data() {
                                mass={data.mass}
                                hair={data.hair_color}
                                eyes={data.eye_color}
+                               gender={data.gender}
+                               homeworld={data.homeworld}
                 />
             ))}
         </div>

@@ -6,12 +6,14 @@ export default function CharacterCard(props){
     return(
         <div>
             Name: {props.name}
-            Birthday: {props.birth}
+            Gender: {props.gender}
+            Birthday: {props.birth} 
+            {/** for above, have to use "" that shows up in console, not birth_year as in API docs. Use that in map api request only*/};
             Height: {props.height}
             Mass: {props.mass}
             Hair Color: {props.hair}
             Eye Color: {props.eyes}
-            Gender: {}
+            
         </div>
     )
 }
