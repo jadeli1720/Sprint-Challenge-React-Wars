@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
 import CharacterCard from './Card';
+import { CardContainer } from './Styling';
 
 //api address:
 //http https://swapi.co/api/people/
@@ -26,7 +27,7 @@ export default function Data() {
     console.log(data);
 
     return (
-        <div className="table">
+        <CardContainer >
             {data.map((data, index) => (
                 <CharacterCard name={data.name} key={index}
                                birth={data.birth_year}
@@ -38,6 +39,6 @@ export default function Data() {
                                homeworld={data.homeworld}
                 />
             ))}
-        </div>
+        </CardContainer>
     )
 }
