@@ -29,8 +29,14 @@ export default function Data() {
 
     return (
         <div>
-            {data.map(data => (
-                <CharacterCard name={data.name}/>
+            {data.map((data, index) => (
+                <CharacterCard name={data.name} key={index}
+                               birth={data.birth_year}
+                               height={data.height}
+                               mass={data.mass}
+                               hair={data.hair_color}
+                               eyes={data.eye_color}
+                />
             ))}
         </div>
     )
