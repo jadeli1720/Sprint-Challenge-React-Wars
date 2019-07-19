@@ -1,10 +1,11 @@
 import React, { useEffect } from 'react';
+// import { Card, Image } from "semantic-ui-react";
 
-export default function (props){
+export default function CharacterCard(props){
     console.log(props);
     return(
         <div>
-            This is from Card.js!
+            {props.name}
         </div>
     )
 }

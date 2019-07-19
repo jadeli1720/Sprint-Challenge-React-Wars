@@ -1,6 +1,7 @@
 import React, { useState, useEffect} from 'react';
 import axios from "axios";
-import Card from './Card'
+import CharacterCard from './Card'
+
 
 
 //api address:
@@ -17,7 +18,7 @@ export default function Data() {
         axios
             .get(`https://swapi.co/api/people/`)
             .then(res => {
-                setData(res.data);
+                setData(res.data.results);
                 // console.log('Got Response', res);
             })
             .catch(error => {
@@ -28,8 +29,9 @@ export default function Data() {
 
     return (
         <div>
-            This is some data we will need to map over!
-            <Card/>
+            {data.map(data => (
+                <CharacterCard name={data.name}/>
+            ))}
         </div>
     )
 }
