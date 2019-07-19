@@ -2,8 +2,6 @@ import React, { useState, useEffect} from 'react';
 import axios from "axios";
 import CharacterCard from './Card';
 
-
-
 //api address:
 //http https://swapi.co/api/people/
 // /people/ -- get all the people resources
