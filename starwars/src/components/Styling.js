@@ -2,32 +2,29 @@ import styled from "styled-components";
 
 export const Main = styled.main`
     margin: 0 auto;
-    border:1px solid red;
     max-width:100%;
     width: 1200px;
-    display:flex;
-    flex-direction: column;
-    flex: wrap;
-    justify-content:center;
 `;
 
 export const CardContainer = styled.div`
-    margin: 0 auto;
-    border: 1px solid green;
+    background: rgba(255, 255, 255, .5);
     max-width:100%;
     width: 1000px;
-    /* display:flex;
-    flex: wrap;
-    justify-content:flex-start; */
+    margin: 0 auto;
+    padding-top: 60px;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
 `;
 
 export const Cards = styled.div`
     display:flex;
     flex-direction: column;
-    border: 1px solid blue;
+    border-radius: 5px;
     background: white;
     max-width:100%;
-    width: 300px;
+    width: 600px;
     margin: 10px;
 `;
 
@@ -44,16 +41,17 @@ export const SubHeader = styled.h2`
 
 export const Description = styled.div`
     display:flex;
-    /* justify-content: space-around; */
+    font-size:18px;
+    margin: 0 auto;
     padding: 10px;
+    width: 400px;
 `;
 
 export const Left = styled.div`
+    font-weight:700px;
     width:50%;
-    border: 1px solid purple;
 `;
 
 export const Right = styled.div`
     width:50%;
-    border: 1px solid hotpink;
 `;
